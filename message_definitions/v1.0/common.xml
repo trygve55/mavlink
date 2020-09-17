@@ -326,6 +326,15 @@
       <entry value="4" name="FENCE_ACTION_RTL">
         <description>Switch to RTL (return to launch) mode and head for the return point.</description>
       </entry>
+      <entry value="5" name="FENCE_ACTION_HOLD">
+        <description>Home mode (hold at current location).</description>
+      </entry>
+      <entry value="6" name="FENCE_ACTION_TERMINATE">
+        <description>Termination failsafe (motors shut down). Some flight stacks may trigger failsafe actions.</description>
+      </entry>
+      <entry value="7" name="FENCE_ACTION_LAND">
+        <description>Land immediately.</description>
+      </entry>
     </enum>
     <enum name="FENCE_BREACH">
       <entry value="0" name="FENCE_BREACH_NONE">
@@ -1969,6 +1978,13 @@
         <param index="5" label="Latitude">Latitude</param>
         <param index="6" label="Longitude">Longitude</param>
         <param index="7">Reserved</param>
+      </entry>
+      <entry value="5005" name="MAV_CMD_NAV_FENCE_BREACH_ACTION" hasLocation="false" isDestination="false">
+        <wip/>
+        <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
+        <description>Geofence action for subsequent fences in plan. The action will apply to every *new* geofences defined after the command unless a new geofence command is set (i.e. every geofence can have a separate action).
+        </description>
+        <param index="1" label="Action" enum="FENCE_ACTION">Fence action on breach.</param>
       </entry>
       <entry value="5100" name="MAV_CMD_NAV_RALLY_POINT" hasLocation="true" isDestination="false">
         <description>Rally point. You can have multiple rally points defined.
