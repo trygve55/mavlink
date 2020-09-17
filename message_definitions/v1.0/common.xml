@@ -311,6 +311,7 @@
     </enum>
     <!-- fenced mode enums -->
     <enum name="FENCE_ACTION">
+       <description>Actions following geofence breach.</description>
       <entry value="0" name="FENCE_ACTION_NONE">
         <description>Disable fenced mode</description>
       </entry>
