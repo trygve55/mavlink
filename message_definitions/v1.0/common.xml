@@ -1982,7 +1982,7 @@
       <entry value="5005" name="MAV_CMD_NAV_FENCE_BREACH_ACTION" hasLocation="false" isDestination="false">
         <wip/>
         <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
-        <description>Geofence action for subsequent fences in plan. The action will apply to every *new* geofences defined after the command unless a new geofence command is set (i.e. every geofence can have a separate action).
+        <description>Geofence action for subsequent fences in plan. The action will apply to every *new* geofences defined after the command unless a new geofence command is set (i.e. every geofence can have a separate action). The flight stack should reject a plan that includes an action that it does not understand.
         </description>
         <param index="1" label="Action" enum="FENCE_ACTION">Fence action on breach.</param>
       </entry>
