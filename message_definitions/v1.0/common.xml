@@ -316,13 +316,13 @@
         <description>Disable fenced mode</description>
       </entry>
       <entry value="1" name="FENCE_ACTION_GUIDED">
-        <description>Fly to specified MAV_CMD_NAV_FENCE_RETURN_POINT.</description>
+        <description>Fly to specified MAV_CMD_NAV_FENCE_RETURN_POINT in GUIDED mode.</description>
       </entry>
       <entry value="2" name="FENCE_ACTION_REPORT">
         <description>Report fence breach, but don't take action</description>
       </entry>
       <entry value="3" name="FENCE_ACTION_GUIDED_THR_PASS">
-        <description>Fly to MAV_CMD_NAV_FENCE_RETURN_POINT with manual throttle control</description>
+        <description>Fly to MAV_CMD_NAV_FENCE_RETURN_POINT with manual throttle control in GUIDED mode.</description>
       </entry>
       <entry value="4" name="FENCE_ACTION_RTL">
         <description>Return/RTL mode.</description>
@@ -331,7 +331,7 @@
         <description>Hold at current location.</description>
       </entry>
       <entry value="6" name="FENCE_ACTION_TERMINATE">
-        <description>Termination failsafe (motors shut down). Some flight stacks may trigger failsafe actions.</description>
+        <description>Termination failsafe. Motors are shut down (some flight stacks may trigger failsafe actions).</description>
       </entry>
       <entry value="7" name="FENCE_ACTION_LAND">
         <description>Land at current location.</description>
