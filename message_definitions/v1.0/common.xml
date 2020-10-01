@@ -313,7 +313,7 @@
     <enum name="FENCE_ACTION">
        <description>Actions following geofence breach.</description>
       <entry value="0" name="FENCE_ACTION_NONE">
-        <description>Disable fenced mode</description>
+        <description>Disable fenced mode. If used in a plan this would mean the next fence is disabled.</description>
       </entry>
       <entry value="1" name="FENCE_ACTION_GUIDED">
         <description>Fly to specified MAV_CMD_NAV_FENCE_RETURN_POINT in GUIDED mode.</description>
@@ -1983,7 +1983,11 @@
       <entry value="5005" name="MAV_CMD_NAV_FENCE_BREACH_ACTION" hasLocation="false" isDestination="false">
         <wip/>
         <!-- This message is work-in-progress and it can therefore change. It should NOT be used in stable production environments. -->
-        <description>Geofence action for a particular fence (the action will apply to the next complete geofence definition after the command). Every geofence in a plan can have its own action; if no fence action is defined for a fence the system-default will be used. The flight stack should reject a plan that includes a geofence action that it does not support and send a STATUSTEXT with the reason.
+        <description>Sets the action on geofence breach.
+          If sent using the command protocol this sets the system-default geofence action.
+          As part of a mission protocol plan it sets the fence action for the next complete geofence definition *after* the command.
+          Note: A fence action defined in a plan will override the default system setting (even if the system-default is `FENCE_ACTION_NONE`).
+          Note: Every geofence in a plan can have its own action; if no fence action is defined for a fence the system-default will be used. The flight stack should reject a plan that includes a geofence action that it does not support and send a STATUSTEXT with the reason.
         </description>
         <param index="1" label="Action" enum="FENCE_ACTION">Fence action on breach.</param>
       </entry>
