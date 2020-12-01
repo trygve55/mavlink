@@ -763,6 +763,9 @@
       <entry value="2" name="COMP_METADATA_TYPE_COMMANDS">
         <description>Meta data which specifies the commands the vehicle supports. (WIP)</description>
       </entry>
+      <entry value="3" name="COMP_METADATA_TYPE_EVENTS">
+        <description>Meta data for events interface</description>
+      </entry>
     </enum>
     <enum name="PARAM_TRANSACTION_TRANSPORT">
       <description>Possible transport layers to set and get parameters via mavlink during a parameter transaction.</description>
