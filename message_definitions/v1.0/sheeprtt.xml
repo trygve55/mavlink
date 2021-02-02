@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<mavlink>
+  <include>common.xml</include>
+  <messages>
+    <!-- sheeprtt specific mavlink2 messages starting at 19200-->
+    <message id="19200" name="SHEEP_RTT_DATA">
+      <description>Message containing a sheepRTT sample. Position of the drone and the distance to the tag with a specific id.</description>
+      <field type="uint32_t" name="seq">Sequential sample id (from power on).</field>
+      <field type="int32_t" name="lat" units="degE7">Latitude, expressed</field>
+      <field type="int32_t" name="lon" units="degE7">Longitude, expressed</field>
+      <field type="int32_t" name="alt" units="mm">Altitude (MSL). Note that virtually all GPS modules provide both WGS84 and MSL.</field>
+      <field type="uint8_t" name="dis" units="5*m">Distance between the drone and the tag.</field>
+      <field type="uint16_t" name="tid">Identifier for the tag.</field>
+    </message>
+    <message id="19201" name="SHEEP_RTT_ACK">
+      <description>Message used to acknowledge receiving of SHEEP_RTT_DATA packet at the GCS.</description>
+      <field type="uint32_t" name="seq">Sequential sample id (from power on).</field>
+    </message>
+  </messages>
+</mavlink>
