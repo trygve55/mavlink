@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <mavlink>
-  <include>common.xml</include>
   <messages>
     <!-- sheeprtt specific mavlink2 messages starting at 19200-->
     <message id="19200" name="SHEEP_RTT_DATA">
